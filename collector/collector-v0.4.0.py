@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# version:1.4 (Hata yakalama eklendi. Her 100 argümanda bir bekle.)
+# version:0.4.0 (Hata yakalama eklendi. Her 100 argümanda bir bekle.)
 
 import xml.etree.ElementTree as ET
 import sys

@@ -22,7 +22,7 @@ with sqlite.connect('/dpart/db/prison.db') as db:
       root = manifest.getroot()
       namespace = '{http://schemas.android.com/apk/res/android}'
       print ("\033[0;37;44m " + xml_file + "\033[0;0;0m")
-      category = path.split("/")[-3]
+      category = xml_file.split("/")[-2]
       print "Dizin Adı/Kategori: " + category
       cursor.execute("""INSERT INTO AppInfo(packageName) VALUES(?) """, [root.attrib['package']])
 
@@ -86,6 +86,6 @@ with sqlite.connect('/dpart/db/prison.db') as db:
           print "Paket ismi veritabanında yok: ",root.attrib['package']
     except Exception as e:
       print ("\033[0;37;44m " + xml_file + "dosyasında hata \033[0;0;0m")
-      with open("/home/omfaer/sarge/insert_db_errors.txt","a") as err:
+      with open("/home/omfaer/insert_db_errors.txt","a") as err:
         err.write("Hata veren dosya:" + xml_file +"\n")
         err.write("Verdiği hata:" + str(e) +"\n\n\n\n")

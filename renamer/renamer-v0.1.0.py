@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # version:0.1.0 (xml uzantılı dosyalara paket ismini yazdırmak için.)
+# Eğer birden fazla aynı paket ismine sahip dosya varsa pas geçiyor
 
 import xml.etree.ElementTree as ET
 import sys
